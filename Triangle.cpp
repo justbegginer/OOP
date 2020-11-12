@@ -69,6 +69,6 @@ double Triangle::get_perimeter() {
 }
 
 double Triangle::get_square() {
-    return sqrt(get_perimeter() * (get_perimeter() - get_distance(_a, _b)) * (get_perimeter() - get_distance(_a, _c)) *
-                (get_perimeter() - get_distance(_b, _c)));
+    return sqrt(get_perimeter()/2 * (get_perimeter()/2 - get_distance(_a, _b)) * (get_perimeter()/2 - get_distance(_a, _c)) *
+                (get_perimeter()/2 - get_distance(_b, _c)));
 }
