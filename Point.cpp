@@ -20,19 +20,19 @@ Point::Point(const Point &point) {
     _y = point._y;
 }
 
-int Point::getX() {
+int Point::get_x() {
     return _x;
 }
 
-int Point::getY() {
+int Point::get_y() {
     return _y;
 }
 
-void Point::setX(int x) {
+void Point::set_x(int x) {
     _x = x;
 }
 
-void Point::setY(int y) {
+void Point::set_y(int y) {
     _y = y;
 }
 

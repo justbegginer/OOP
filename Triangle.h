@@ -25,7 +25,7 @@ public:
     bool is_triangle();
     double get_perimeter();
     double get_square();
-    friend bool is_equal_square(Triangle const &first , Triangle const &second);
+    friend bool is_equal_square(Triangle first , Triangle second);
     friend void move(Triangle &triangle , int move_x , int move_y);
 };
 
