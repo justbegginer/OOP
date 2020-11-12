@@ -69,6 +69,20 @@ double Triangle::get_perimeter() {
 }
 
 double Triangle::get_square() {
-    return sqrt(get_perimeter()/2 * (get_perimeter()/2 - get_distance(_a, _b)) * (get_perimeter()/2 - get_distance(_a, _c)) *
-                (get_perimeter()/2 - get_distance(_b, _c)));
+    return sqrt(get_perimeter() / 2 * (get_perimeter() / 2 - get_distance(_a, _b)) *
+                (get_perimeter() / 2 - get_distance(_a, _c)) *
+                (get_perimeter() / 2 - get_distance(_b, _c)));
+}
+
+bool is_equal_square(Triangle first, Triangle second) {
+    return first.get_square() == second.get_square();
+}
+
+void move(Triangle &triangle, int move_x, int move_y) {
+    auto const changed_a = Point(triangle._a.get_x(), triangle._a.get_y());
+    triangle.set_a(changed_a);
+    auto const changed_b = Point(triangle._b.get_x(), triangle._b.get_y());
+    triangle.set_b(changed_b);
+    auto const changed_c = Point(triangle._c.get_x(), triangle._c.get_y());
+    triangle.set_c(changed_c);
 }
